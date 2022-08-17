@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{561A9956-B233-4A83-87E5-D886071BC206}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BloonChipper</RootNamespace>
+    <AssemblyName>BloonChipper</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Btd6ModHelper">
+      <HintPath>D:\Stuffs\Steam\steamapps\common\BloonsTD6\Mods\Btd6ModHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>C:.\Program Files (x86)\Steam\steamapps\common\BloonsTD6\MelonLoader\Managed\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BloonChipper.cs" />
+    <Compile Include="ModHelperData.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Displays\Icon\Bottom Path\" />
+    <Folder Include="Displays\Portrait\Bottom Path\" />
+    <Folder Include="Displays\TowerModels\Bottom Path\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Portrait\Middle Path\FasterShred-Portrait.png" />
+    <EmbeddedResource Include="Displays\Portrait\Top Path\DualLayerBlade-Portrait.png" />
+    <EmbeddedResource Include="Displays\Portrait\Top Path\HeavyDutySuction-Portrait.png" />
+    <EmbeddedResource Include="Displays\Portrait\Top Path\Suckier-Portrait.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Middle Path\FasterShredDisplay.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Middle Path\LongRangeSuckDisplay.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Middle Path\SupaVacDisplay.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Middle Path\TripleBarrelDisplay.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Top Path\DualLayerBladesDisplay.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Top Path\HeavyDutySuckageDisplay.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Top Path\SuckierDisplay.png" />
+    <EmbeddedResource Include="Displays\TowerModels\Top Path\SuperWideFunnelDisplay.png" />
+    <EmbeddedResource Include="Displays\Portrait\Middle Path\LongRangeSuck-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Icon\Middle Path\FasterShred-Icon.png" />
+    <EmbeddedResource Include="Displays\Icon\Middle Path\LongRangeSuck-Icon.png" />
+    <EmbeddedResource Include="Displays\Icon\Middle Path\SupaVac-Icon.png" />
+    <EmbeddedResource Include="Displays\Icon\Middle Path\TripleBarrel-Icon.png" />
+    <EmbeddedResource Include="Displays\Icon\Top Path\DualLayerBlades-Icon.png" />
+    <EmbeddedResource Include="Displays\Icon\Top Path\HeavyDutySuction-Icon.png" />
+    <EmbeddedResource Include="Displays\Icon\Top Path\Suckier-Icon.png" />
+    <EmbeddedResource Include="Displays\Icon\Top Path\SuperWideFunnel-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\TowerModels\Top Path\UltraWideFunnelDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Portrait\Top Path\SuperWideFunnel-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Portrait\Middle Path\SupaVac-Portrait.png" />
+    <EmbeddedResource Include="Displays\Portrait\Middle Path\TripleBarrel-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\TowerModels\Middle Path\VacuumDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Portrait\Top Path\UltraWideFunnel-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Portrait\Middle Path\Vacuum-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Icon\Top Path\UltraWideFunnel-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Icon\Middle Path\Vacuum-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\TowerModels\BloonChipper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Icon\BloonChipper-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Displays\Portrait\Bloonchipper-Portrait.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "D:\Stuffs\Steam\steamapps\common\BloonsTD6\Mods" /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
